@@ -1,4 +1,4 @@
-# DIO---Trilha-Java
+# DIO-Trilha-Java
 
 Ideia do desafio
 
