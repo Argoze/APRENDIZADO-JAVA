@@ -8,11 +8,8 @@ public class ResultadoEscolar {
         System.err.println("digite a nota do aluno");
         int nota = scanner.nextInt();
 
-        if (nota>= 7)
-            System.out.println("Aprovado");
-
-            else
-            System.err.println("Reprovado");
+        String resultado = nota >=7 ? "Aprovado" : nota >= 5 && nota <7 ? "Recuperação" : "Reprovado" ;
+        System.out.println(resultado);
     }
     
 }
