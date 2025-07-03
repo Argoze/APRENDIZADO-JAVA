@@ -5,7 +5,7 @@ public class ExemploForArray {
 
         for(String aluno : alunos){
 
-            System.out.println("O nome do aluno é: " + alunos);
+            System.out.println("O nome do aluno é: " + aluno);
         }
         
     }
