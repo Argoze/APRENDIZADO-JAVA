@@ -18,7 +18,7 @@ public class Main {
             scanner.nextLine(); // consumir quebra de linha
 
             switch (opcao) {
-                case 1:
+                case 1 -> {
                     System.out.print("Nome: ");
                     String nome = scanner.nextLine();
                     System.out.print("Telefone: ");
@@ -29,13 +29,11 @@ public class Main {
                     Contato contato = new Contato(nome, telefone, email);
                     agenda.adicionarContato(contato);
                     System.out.println("Contato adicionado.");
-                    break;
+                }
 
-                case 2:
-                    agenda.listarContatos();
-                    break;
+                case 2 -> agenda.listarContatos();
 
-                case 3:
+                case 3 -> {
                     System.out.print("Nome a buscar: ");
                     String nomeBusca = scanner.nextLine();
                     Contato encontrado = agenda.buscarPorNome(nomeBusca);
@@ -44,22 +42,21 @@ public class Main {
                     } else {
                         System.out.println("Contato não encontrado.");
                     }
-                    break;
+                }
 
-                case 4:
+                case 4 -> {
                     System.out.print("Nome a remover: ");
                     String nomeRemover = scanner.nextLine();
                     boolean removido = agenda.removerPorNome(nomeRemover);
                     System.out.println(removido ? "Contato removido." : "Contato não encontrado.");
-                    break;
+                }
 
-                case 0:
+                case 0 -> {
                     System.out.println("Encerrando...");
                     System.exit(0);
-                    break;
+                }
 
-                default:
-                    System.out.println("Opção inválida.");
+                default -> System.out.println("Opção inválida.");
             }
         }
     }
